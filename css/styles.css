@@ -5,7 +5,15 @@
 }
 
 :root{
-    primer: #DC994D;
-    segundo: #1D3340;
-    tercer: #FFFF;
+    --primer: #DC994D;
+    --segundo: #1D3340;
+    --tercer: #FFFF;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    list-style: none;
 }

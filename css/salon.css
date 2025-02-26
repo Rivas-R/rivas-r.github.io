@@ -1,0 +1,58 @@
+/* Definir variables de color */
+:root {
+    --primer: #DC994D;
+    --segundo: #1D3340;
+    --tercer: #FFFFFF;
+}
+
+
+/* Contenedor principal con fondo oscuro */
+.fondo_1 {
+    background-color: var(--segundo); /* Color oscuro */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column; /* Apila elementos en columna */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Para que .fondo_2 pueda posicionarse dentro */
+}
+
+/* Lista dentro de fondo_1 */
+.fondo_1 ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* Espaciado entre elementos de la lista */
+.fondo_1 ul li {
+    margin: 15px;
+}
+
+/* Botón con estilos */
+.fondo_1 ul li button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.fondo_1 ul li button:hover {
+    background-color: var(--primer);
+    color: white;
+}
+
+/* Caja que estará debajo del ul */
+.fondo_2 {
+    background-color: #152127; /* Color oscuro diferente */
+    padding: 20px;
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    margin-top: 20px; /* Espacio debajo del ul */
+}
