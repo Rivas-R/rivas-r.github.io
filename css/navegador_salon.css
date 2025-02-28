@@ -1,0 +1,38 @@
+:root {
+    --primer: #DC994D;
+    --segundo: #1D3340;
+    --tercer: #FFFFFF;
+}
+
+.navbar{
+    padding: 0px;
+    background-color: var(--segundo) !important;
+}
+.navbar-brand {
+    color: whitesmoke;
+    font-size: 36px;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-style: italic;
+}
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+.align-top {
+    align-items: flex-start !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;  /* Make the text white */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    font-size: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--primer);  /* Change background to blue when hovered */
+    color: white !important; /* Ensure text remains white */
+}
+

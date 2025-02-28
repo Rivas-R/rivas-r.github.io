@@ -5,7 +5,6 @@
     --tercer: #FFFFFF;
 }
 
-
 /* Contenedor principal con fondo oscuro */
 .fondo_1 {
     background-color: var(--segundo); /* Color oscuro */
@@ -42,6 +41,7 @@
     transition: 0.3s ease;
 }
 
+/* Estilos para el botón en hover */
 .fondo_1 ul li button:hover {
     background-color: var(--primer);
     color: white;
@@ -50,9 +50,142 @@
 /* Caja que estará debajo del ul */
 .fondo_2 {
     background-color: #152127; /* Color oscuro diferente */
-    padding: 20px;
     width: 80%;
-    height: 50%;
+    height: 60%;
     border-radius: 10px;
     margin-top: 20px; /* Espacio debajo del ul */
+    display: flex; /* Convertir en contenedor flexible */
+}
+
+/* Contenedor de la imagen */
+.imagen-container {
+    width: 50%; /* Ocupa la mitad izquierda */
+    height: 100%; /* Ocupa toda la altura */
+    overflow: hidden; /* Para que la imagen no se salga */
+    border-top-left-radius: 10px; /* Bordes redondeados en la esquina superior izquierda */
+    border-bottom-left-radius: 10px; /* Bordes redondeados en la esquina inferior izquierda */
+}
+
+/* Estilos para la imagen */
+.imagen-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+}
+
+/* Contenedor del texto */
+.texto-container {
+    width: 50%; /* Ocupa la mitad derecha */
+    padding: 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilos para la lista dentro de .texto-container */
+.texto-container ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilos para el enlace dentro del tercer <li> */
+.fondo_2 .texto-container ul li:nth-child(3) a {
+    padding-top: 70px; /* Padding superior */
+    color: var(--tercer); /* Color del texto */
+    display: inline-block; /* Comportamiento de bloque en línea */
+    transition: font-weight 0.3s ease; /* Transición suave */
+}
+
+/* Estilos para el enlace en hover */
+.fondo_2 .texto-container ul li:nth-child(3) a:hover {
+    font-weight: bold; /* Texto en negrita */
+}
+/* Espaciado entre elementos de la lista */
+.texto-container ul li p {
+    margin: 15px 0; /* Espaciado vertical entre elementos */
+}
+
+/* Estilos para el botón dentro de .texto-container */
+.texto-container ul li button {
+    background-color: var(--primer); /* Color de fondo */
+    color: var(--segundo); /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/* Contenedor principal */
+.content {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Lista flexible */
+.content ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between; /* Distribuir espacio entre tarjetas */
+}
+
+/* Tarjetas */
+.content ul li {
+    width: 80%;
+    min-height: 560px; /* Altura mínima definida */
+    background-color: #F3F3F3;
+    overflow: hidden;
+    text-align: center;
+    display: flex; /* Flexbox para organizar contenido */
+    flex-direction: column; /* Alinear contenido en columna */
+    margin-right: 15px; /* Margen entre tarjetas */
+}
+
+.content ul li:nth-child(3){
+    margin-right: 0;
+}
+/* Imagen */
+.content ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenedor de contenido */
+.content ul li a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+    padding: 15px;
+    text-decoration: none;
+}
+
+/* Título */
+.content ul li h3 {
+    color: var(--segundo); /* Usar variable de color */
+    margin-top: 15px;
+}
+
+/* Descripción */
+.content ul li p {
+    color: var(--segundo); /* Usar variable de color */
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    padding: 0 15px;
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+}
+
+/* Botón */
+.content ul li button {
+    background-color: var(--primer);
+    color: var(--segundo);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: auto; /* Lo empuja hacia abajo */
+    transition: 0.3s ease; /* Transición suave */
+    
+}
+
+.content ul li button:hover {
+    color: var(--tercer);
 }
