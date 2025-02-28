@@ -41,6 +41,11 @@
     transition: 0.3s ease;
 }
 
+/* Estilos para el botón en hover */
+.fondo_1 ul li button:hover {
+    background-color: var(--primer);
+    color: white;
+}
 
 /* Caja que estará debajo del ul */
 .fondo_2 {
@@ -82,14 +87,15 @@
     list-style: none;
 }
 
+/* Estilos para el enlace dentro del tercer <li> */
 .fondo_2 .texto-container ul li:nth-child(3) a {
-    padding-top: 70px; 
-    color: var(--tercer); 
-    display: inline-block; 
+    padding-top: 70px;
+    color: var(--tercer);
+    display: inline-block;
 }
 
 /* Espaciado entre elementos de la lista */
-.texto-container ul li p{
+.texto-container ul li p {
     margin: 15px 0; /* Espaciado vertical entre elementos */
 }
 
@@ -102,3 +108,71 @@
     font-size: 1em;
 }
 
+/* Contenedor principal */
+.content {
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Lista flexible */
+.content ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-between; /* Distribuir espacio entre tarjetas */
+}
+
+/* Tarjetas */
+.content ul li {
+    width: 30%;
+    min-height: 560px; /* Altura mínima definida */
+    background-color: #F3F3F3;
+    overflow: hidden;
+    text-align: center;
+    display: flex; /* Flexbox para organizar contenido */
+    flex-direction: column; /* Alinear contenido en columna */
+    margin-right: 15px; /* Margen entre tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Imagen */
+.content ul li img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contenedor de contenido */
+.content ul li a {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
+    padding: 15px;
+}
+
+/* Título */
+.content ul li h3 {
+    color: var(--segundo); /* Usar variable de color */
+    margin-top: 15px;
+}
+
+/* Descripción */
+.content ul li p {
+    color: var(--segundo); /* Usar variable de color */
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    padding: 0 15px;
+    flex-grow: 1; /* Hace que la descripción ocupe el espacio disponible */
+}
+
+/* Botón */
+.content ul li button {
+    background-color: var(--primer);
+    color: var(--segundo);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: auto; /* Lo empuja hacia abajo */
+    transition: 0.3s ease; /* Transición suave */
+}
