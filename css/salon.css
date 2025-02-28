@@ -89,11 +89,16 @@
 
 /* Estilos para el enlace dentro del tercer <li> */
 .fondo_2 .texto-container ul li:nth-child(3) a {
-    padding-top: 70px;
-    color: var(--tercer);
-    display: inline-block;
+    padding-top: 70px; /* Padding superior */
+    color: var(--tercer); /* Color del texto */
+    display: inline-block; /* Comportamiento de bloque en línea */
+    transition: font-weight 0.3s ease; /* Transición suave */
 }
 
+/* Estilos para el enlace en hover */
+.fondo_2 .texto-container ul li:nth-child(3) a:hover {
+    font-weight: bold; /* Texto en negrita */
+}
 /* Espaciado entre elementos de la lista */
 .texto-container ul li p {
     margin: 15px 0; /* Espaciado vertical entre elementos */
@@ -123,7 +128,7 @@
 
 /* Tarjetas */
 .content ul li {
-    width: 30%;
+    width: 80%;
     min-height: 560px; /* Altura mínima definida */
     background-color: #F3F3F3;
     overflow: hidden;
@@ -131,9 +136,11 @@
     display: flex; /* Flexbox para organizar contenido */
     flex-direction: column; /* Alinear contenido en columna */
     margin-right: 15px; /* Margen entre tarjetas */
-    border-radius: 10px; /* Bordes redondeados */
 }
 
+.content ul li:nth-child(3){
+    margin-right: 0;
+}
 /* Imagen */
 .content ul li img {
     width: 100%;
