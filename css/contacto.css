@@ -5,7 +5,7 @@ header {
 }
 
 .fondo_1 {
-    background-color: var(--segundo); /* Color oscuro */
+    background-color: var(--segundo); 
     width: 55%;
     padding: 30px;
     display: flex;
