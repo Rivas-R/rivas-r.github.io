@@ -6,7 +6,7 @@ header {
 
 .fondo_1 {
     background-color: var(--segundo); 
-    width: 55%;
+    width: 50%;
     padding: 30px;
     display: flex;
     justify-content: center;
