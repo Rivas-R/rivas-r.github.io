@@ -5,7 +5,6 @@
     --tercer: #FFFFFF;
 }
 
-
 /* Contenedor principal con fondo oscuro */
 .fondo_1 {
     background-color: var(--segundo); /* Color oscuro */
@@ -50,9 +49,61 @@
 /* Caja que estará debajo del ul */
 .fondo_2 {
     background-color: #152127; /* Color oscuro diferente */
-    padding: 20px;
     width: 80%;
-    height: 50%;
+    height: 60%;
     border-radius: 10px;
     margin-top: 20px; /* Espacio debajo del ul */
+    display: flex; /* Convertir en contenedor flexible */
 }
+
+/* Contenedor de la imagen */
+.imagen-container {
+    width: 50%; /* Ocupa la mitad izquierda */
+    height: 100%; /* Ocupa toda la altura */
+    overflow: hidden; /* Para que la imagen no se salga */
+    border-top-left-radius: 10px; /* Bordes redondeados en la esquina superior izquierda */
+    border-bottom-left-radius: 10px; /* Bordes redondeados en la esquina inferior izquierda */
+}
+
+/* Estilos para la imagen */
+.imagen-container img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* La imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio sin distorsionarse */
+}
+
+/* Contenedor del texto */
+.texto-container {
+    width: 50%; /* Ocupa la mitad derecha */
+    padding: 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+/* Estilos para la lista dentro de .texto-container */
+.texto-container ul {
+    padding: 0;
+    list-style: none;
+}
+
+.texto-container ul li a {
+    color: var(--tercer);
+    
+}
+
+/* Espaciado entre elementos de la lista */
+.texto-container ul li {
+    margin: 15px 0; /* Espaciado vertical entre elementos */
+}
+
+/* Estilos para el botón dentro de .texto-container */
+.texto-container ul li button {
+    background-color: var(--primer); /* Color de fondo */
+    color: var(--tercer); /* Color del texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
