@@ -4,29 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto y Ubicación</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        header {
-            text-align: center;
-            margin: 50px auto;
-            width: 80%;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <h1>CONTACTO Y UBICACIÓN</h1>
-        <p>Gracias por su interés en Hoteles Araiza. Para obtener más información sobre nuestras propiedades o asociaciones y otras</p>
-        <p> oportunidades comerciales, comuníquese con nosotros hoy.</p>
+        <p>Gracias por su interés en Hoteles Araiza. Para obtener más información sobre nuestras propiedades o asociaciones y otras oportunidades comerciales, comuníquese con nosotros hoy.</p>
     </header>
+
     <div class="fondo_1">
-        <ul>
-            <li><h1>Salones</h1></li>
-            <li><p>Disfruta la boda en nuestra salones</p></li>
-            <li><a href="#"><button>EXPLORA SALONES</button></a></li>
-        </ul>
+        <form class="contact-form">
             
+            <div class="contact-option">
+                <label class="contact-label">Contáctame por: *</label>
+                <div class="radio-group">
+                    <input type="radio" id="telefono" name="contacto">
+                    <label for="telefono">Teléfono</label>
+                    <input type="radio" id="correo" name="contacto">
+                    <label for="correo">Correo</label>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre">
+                </div>
+                <div class="input-group">
+                    <label for="apellido">Apellido *</label>
+                    <input type="text" id="apellido">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="telefono-input">Teléfono *</label>
+                    <input type="text" id="telefono-input">
+                </div>
+                <div class="input-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email">
+                </div>
+            </div>
+
+            <div class="full-width">
+                <label for="comentarios">Comentarios *</label>
+                <textarea id="comentarios"></textarea>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="consentimiento">
+                <label for="consentimiento">Doy mi consentimiento para que este sitio web almacene la información enviada para que puedan responder a mi consulta.</label>
+            </div>
+
+            <button type="submit" class="submit-btn">ENVIAR</button>
+        </form>
     </div>
-    
 </body>
 </html>

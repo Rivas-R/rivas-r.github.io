@@ -1,0 +1,104 @@
+header {
+    text-align: center;
+    margin: 50px auto;
+    width: 75%;
+}
+header {
+    text-align: center;
+    margin: 100px auto;
+    width: 75%;
+    padding: 50px 20px;
+    background-image: url("../img/BlanTex.png");
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black; /* Asegura que el texto sea visible */
+    border-radius: 10px; /* Bordes redondeados para un diseño elegante */
+}
+
+.fondo_1 {
+    background-color: var(--segundo); /* Color oscuro */
+    width: 55%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    margin: 0 auto; /* Centra horizontalmente */
+    border-radius: 10px;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-option {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+/* Acomoda los inputs en dos columnas */
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    width: 48%; /* Tamaño para que quepan en una fila */
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.full-width textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkbox {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Estiliza el botón y lo pone en la esquina inferior derecha */
+.submit-btn {
+    background-color: #d89453;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+.submit-btn:hover {
+    background-color: #b4783f;
+}
