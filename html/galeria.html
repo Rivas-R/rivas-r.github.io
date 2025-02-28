@@ -79,7 +79,6 @@
             height: 100%;
             border-radius: 10px;
         }
-       /* Estilos para la ventana emergente */
        .modal {
             display: none;
             position: fixed;
@@ -135,64 +134,88 @@
         <!-- Sección 1 -->
         <div class="seccion">
             <div class="fila-superior">
-                <img src="../img/salon1/S1F1.jpg" alt="Salón 1" class="grande" onclick="openModal(this)">
+                <img src="../img/salon1/S1F1.jpg" alt="Salón 1" class="grande" onclick="openModal(0)">
                 <div class="columna-mediana">
-                    <img src="../img/salon1/S1F2.jpg" alt="Salón 2" class="mediana" onclick="openModal(this)">
-                    <img src="../img/salon1/S1F3.jpg" alt="Salón 3" class="mediana" onclick="openModal(this)">
+                    <img src="../img/salon1/S1F2.jpg" alt="Salón 2" class="mediana" onclick="openModal(1)">
+                    <img src="../img/salon1/S1F3.jpg" alt="Salón 3" class="mediana" onclick="openModal(2)">
                 </div>
             </div>
             <div class="fila-inferior">
-                <img src="../img/salon1/S1F4.jpg" alt="Salón 4" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon1/S1F5.jpg" alt="Salón 5" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon1/S1F6.jpg" alt="Salón 6" class="pequena" onclick="openModal(this)">
+                <img src="../img/salon1/S1F4.jpg" alt="Salón 4" class="pequena" onclick="openModal(3)">
+                <img src="../img/salon1/S1F5.jpg" alt="Salón 5" class="pequena" onclick="openModal(4)">
+                <img src="../img/salon1/S1F6.jpg" alt="Salón 6" class="pequena" onclick="openModal(5)">
             </div>
         </div>
         
-        <!-- Sección 2 -->
         <div class="seccion">
             <div class="fila-superior">
-                <img src="../img/salon2/S2F1.jpg" alt="Salón 7" class="grande" onclick="openModal(this)">
+                <img src="../img/salon2/S2F1.jpg" alt="Salón 7" class="grande" onclick="openModal(6)">
                 <div class="columna-mediana">
-                    <img src="../img/salon2/S2F2.jpg" alt="Salón 8" class="mediana" onclick="openModal(this)">
-                    <img src="../img/salon2/S2F3.jpg" alt="Salón 9" class="mediana" onclick="openModal(this)">
+                    <img src="../img/salon2/S2F2.jpg" alt="Salón 8" class="mediana" onclick="openModal(7)">
+                    <img src="../img/salon2/S2F3.jpg" alt="Salón 9" class="mediana" onclick="openModal(8)">
                 </div>
             </div>
             <div class="fila-inferior">
-                <img src="../img/salon2/S2F4.jpg" alt="Salón 10" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon2/S2F5.jpg" alt="Salón 11" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon2/S2F6.jpg" alt="Salón 12" class="pequena" onclick="openModal(this)">
+                <img src="../img/salon2/S2F4.jpg" alt="Salón 10" class="pequena" onclick="openModal(9)">
+                <img src="../img/salon2/S2F5.jpg" alt="Salón 11" class="pequena" onclick="openModal(10)">
+                <img src="../img/salon2/S2F6.jpg" alt="Salón 12" class="pequena" onclick="openModal(11)">
             </div>
         </div>
         
-        <!-- Sección 3 -->
         <div class="seccion">
             <div class="fila-superior">
-                <img src="../img/salon3/S3F1.jpg" alt="Salón 13" class="grande" onclick="openModal(this)">
+                <img src="../img/salon3/S3F1.jpg" alt="Salón 13" class="grande" onclick="openModal(12)">
                 <div class="columna-mediana">
-                    <img src="../img/salon3/S3F2.jpg" alt="Salón 14" class="mediana" onclick="openModal(this)">
-                    <img src="../img/salon3/S3F3.jpg" alt="Salón 15" class="mediana" onclick="openModal(this)">
+                    <img src="../img/salon3/S3F2.jpg" alt="Salón 14" class="mediana" onclick="openModal(13)">
+                    <img src="../img/salon3/S3F3.jpg" alt="Salón 15" class="mediana" onclick="openModal(14)">
                 </div>
             </div>
             <div class="fila-inferior">
-                <img src="../img/salon3/S3F4.jpg" alt="Salón 16" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon3/S3F5.jpg" alt="Salón 17" class="pequena" onclick="openModal(this)">
-                <img src="../img/salon3/S3F6.jpg" alt="Salón 18" class="pequena" onclick="openModal(this)">
+                <img src="../img/salon3/S3F4.jpg" alt="Salón 16" class="pequena" onclick="openModal(15)">
+                <img src="../img/salon3/S3F5.jpg" alt="Salón 17" class="pequena" onclick="openModal(16)">
+                <img src="../img/salon3/S3F6.jpg" alt="Salón 18" class="pequena" onclick="openModal(17)">
             </div>
         </div>
     </div>
-     <!-- Modal para visualizar imagen completa -->
-     <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img id="modal-img" class="modal-content">
+    
+     <div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="nav-buttons">
+            <button onclick="prevImage()">&#10094;</button>
+            <img id="modal-img" class="modal-content">
+            <button onclick="nextImage()">&#10095;</button>
+        </div>
     </div>
 
     <script>
-        function openModal(img) {
+        let currentImageIndex = 0;
+        const images = [
+            "../img/salon1/S1F1.jpg", "../img/salon1/S1F2.jpg", "../img/salon1/S1F3.jpg", 
+            "../img/salon1/S1F4.jpg", "../img/salon1/S1F5.jpg", "../img/salon1/S1F6.jpg",
+             "../img/salon2/S2F1.jpg", "../img/salon2/S2F2.jpg", "../img/salon2/S2F3.jpg", 
+            "../img/salon2/S2F4.jpg", "../img/salon2/S2F5.jpg", "../img/salon2/S2F6.jpg",
+             "../img/salon3/S3F1.jpg", "../img/salon3/S3F2.jpg", "../img/salon3/S3F3.jpg", 
+            "../img/salon3/S3F4.jpg", "../img/salon3/S3F5.jpg", "../img/salon3/S3F6.jpg"
+        ];
+
+        function openModal(index) {
+            currentImageIndex = index;
             document.getElementById("modal").style.display = "flex";
-            document.getElementById("modal-img").src = img.src;
+            document.getElementById("modal-img").src = images[currentImageIndex];
         }
+
         function closeModal() {
             document.getElementById("modal").style.display = "none";
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById("modal-img").src = images[currentImageIndex];
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById("modal-img").src = images[currentImageIndex];
         }
     </script>
 </body>
