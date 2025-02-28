@@ -4,134 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería de Salones</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
-            text-align: center;
-        }
-        .content {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: justify;
-        }
-        h2 {
-            color: #2c3e50;
-            text-align: center;
-            .galeria {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 90vw;
-            }
-        }
-        .galeria {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            max-width: 90vw;
-        }
-        .seccion {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-        .fila-superior {
-            display: flex;
-            gap: 10px;
-        }
-        .columna-mediana {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .grande {
-            width: 50vw;
-            height: 30vw;
-            object-fit: cover;
-        }
-        .mediana {
-            width: 24vw;
-            height: 14.5vw;
-            object-fit: cover;
-        }
-        .fila-inferior {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            gap: 10px;
-        }
-        .pequena {
-            width: 24vw;
-            height: 16vw;
-            object-fit: cover;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-       .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .modal-content {
-            max-width: 80%;
-            max-height: 80%;
-        }
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .nav-buttons button {
-            background: rgba(255, 255, 255, 0.5);
-            border: none;
-            padding: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+     <!-- Google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- footer y navegador -->
+    <script src="/js/footer.js"></script>
+    <script src="/js/navegador.js"></script>
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/navegador_salon.css"> 
+    <link rel="stylesheet" href="/css/galeria.css">
 </head>
 <body>
-    <img src="../img/Placeholder.png" alt="Logo empresa" width="8%">
+    <div class="navegador"></div>
+    <br>
     <div class="content">
         <h2>Descubra la elegancia y versatilidad de nuestros salones.</h2>
-        <p>En [Nombre empresa], nos enorgullece ofrecer salones de eventos elegantes y versátiles, perfectos para cualquier ocasión. Desde celebraciones íntimas hasta grandes recepciones, nuestros espacios han sido diseñados para brindar comodidad y estilo. Explora nuestra galería y visualiza el escenario ideal para tu evento.</p>
+        <p>En Salones Paraiso, nos enorgullece ofrecer salones de eventos elegantes y versátiles, perfectos para cualquier ocasión. Desde celebraciones íntimas hasta grandes recepciones, nuestros espacios han sido diseñados para brindar comodidad y estilo. Explora nuestra galería y visualiza el escenario ideal para tu evento.</p>
     </div>
-
+    <br>
     <h1>Galería de Salones</h1>
     <div class="galeria">
-        <!-- Sección 1 -->
         <div class="seccion">
             <div class="fila-superior">
                 <img src="../img/salon1/S1F1.jpg" alt="Salón 1" class="grande" onclick="openModal(0)">
@@ -218,5 +114,7 @@
             document.getElementById("modal-img").src = images[currentImageIndex];
         }
     </script>
+    <br>
+    <div class="footer"></div>
 </body>
 </html>
