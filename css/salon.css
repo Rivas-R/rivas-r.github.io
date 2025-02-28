@@ -86,24 +86,23 @@
     list-style: none;
 }
 
-.texto-container ul li a {
-    color: var(--tercer);
-    
+.fondo_2 .texto-container ul li:nth-child(3) a {
+    padding-top: 70px; 
+    color: var(--tercer); 
+    display: inline-block; 
 }
 
 /* Espaciado entre elementos de la lista */
-.texto-container ul li {
+.texto-container ul li p{
     margin: 15px 0; /* Espaciado vertical entre elementos */
 }
 
 /* Estilos para el botón dentro de .texto-container */
 .texto-container ul li button {
     background-color: var(--primer); /* Color de fondo */
-    color: var(--tercer); /* Color del texto */
+    color: var(--segundo); /* Color del texto */
     border: none;
     padding: 10px 20px;
     font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s ease;
 }
 
