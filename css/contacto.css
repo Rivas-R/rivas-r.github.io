@@ -3,18 +3,6 @@ header {
     margin: 50px auto;
     width: 75%;
 }
-header {
-    text-align: center;
-    margin: 100px auto;
-    width: 75%;
-    padding: 50px 20px;
-    background-image: url("../img/BlanTex.png");
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center;
-    background-repeat: no-repeat;
-    color: black; /* Asegura que el texto sea visible */
-    border-radius: 10px; /* Bordes redondeados para un diseño elegante */
-}
 
 .fondo_1 {
     background-color: var(--segundo); /* Color oscuro */
