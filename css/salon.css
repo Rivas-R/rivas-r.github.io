@@ -154,6 +154,7 @@
     flex-direction: column;
     flex-grow: 1; /* Hace que el contenido ocupe el espacio disponible */
     padding: 15px;
+    text-decoration: none;
 }
 
 /* Título */
@@ -182,4 +183,9 @@
     cursor: pointer;
     margin-top: auto; /* Lo empuja hacia abajo */
     transition: 0.3s ease; /* Transición suave */
+    
+}
+
+.content ul li button:hover {
+    color: var(--tercer);
 }
